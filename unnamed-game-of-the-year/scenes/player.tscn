@@ -34,7 +34,7 @@ position_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+[node name="HotBar" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -45,3 +45,41 @@ offset_top = -154.0
 offset_right = 730.0
 grow_horizontal = 2
 grow_vertical = 0
+alignment = 1
+
+[node name="Slot1" type="TextureButton" parent="CanvasLayer/HotBar"]
+layout_mode = 2
+
+[node name="Slot1Label" type="Label" parent="CanvasLayer/HotBar/Slot1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot2" type="TextureButton" parent="CanvasLayer/HotBar"]
+layout_mode = 2
+
+[node name="Slot3" type="TextureButton" parent="CanvasLayer/HotBar"]
+layout_mode = 2
+
+[node name="Slot4" type="TextureButton" parent="CanvasLayer/HotBar"]
+layout_mode = 2
+
+[node name="Slot5" type="TextureButton" parent="CanvasLayer/HotBar"]
+layout_mode = 2
+
+[node name="Slot6" type="TextureButton" parent="CanvasLayer/HotBar"]
+layout_mode = 2
+
+[node name="Slot7" type="TextureButton" parent="CanvasLayer/HotBar"]
+layout_mode = 2
+
+[node name="Slot8" type="TextureButton" parent="CanvasLayer/HotBar"]
+layout_mode = 2
+
+[node name="Slot9" type="TextureButton" parent="CanvasLayer/HotBar"]
+layout_mode = 2
