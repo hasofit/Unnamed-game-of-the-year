@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm4nynymisnfy"]
+[gd_scene load_steps=5 format=3 uid="uid://c4fe5mwt4udl0"]
 
 [ext_resource type="Script" uid="uid://c6nf4ertvr8lk" path="res://slime.gd" id="1_p2gj0"]
 [ext_resource type="Texture2D" uid="uid://u3aghoxcxdyi" path="res://sprites/slime.png" id="2_n6pvg"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pjw23"]
-radius = 35.44009
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_p2gj0"]
 radius = 35.22783
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n6pvg"]
+radius = 30.016663
 
 [node name="slime" type="CharacterBody2D"]
 script = ExtResource("1_p2gj0")
@@ -16,12 +16,12 @@ script = ExtResource("1_p2gj0")
 scale = Vector2(5, 5)
 texture = ExtResource("2_n6pvg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_pjw23")
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_p2gj0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n6pvg")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

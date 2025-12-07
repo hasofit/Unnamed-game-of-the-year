@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://corendet3kapt"]
+[gd_scene load_steps=9 format=3 uid="uid://corendet3kapt"]
 
 [ext_resource type="Script" uid="uid://ht7wgr73gocf" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cbrph1dql3vqu" path="res://sprites/test_helmet.png" id="2_dqkch"]
@@ -18,6 +18,20 @@ animations = [{
 "name": &"Idle",
 "speed": 12.0
 }]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqkch"]
+bg_color = Color(0.6, 0.6, 0.6, 0.5921569)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlg0r"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(10, 10)
@@ -293,6 +307,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_qhqgy")
+
+[node name="Health Bar" type="ProgressBar" parent="CanvasLayer"]
+offset_right = 590.4
+offset_bottom = 27.800003
+theme_override_styles/background = SubResource("StyleBoxFlat_dqkch")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qlg0r")
+value = 100.0
+show_percentage = false
 
 [connection signal="pressed" from="CanvasLayer/HotBar/Slot1" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/HotBar/Slot2" to="." method="_on_slot_2_pressed"]

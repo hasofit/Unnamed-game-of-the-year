@@ -29,7 +29,10 @@ extends CharacterBody2D
 @onready var slot_7_selected: TextureRect = $CanvasLayer/HotBar/Slot7/Slot7Selected
 @onready var slot_8_selected: TextureRect = $CanvasLayer/HotBar/Slot8/Slot8Selected
 @onready var slot_9_selected: TextureRect = $CanvasLayer/HotBar/Slot9/Slot9Selected
+
 @onready var helmet_sprite_node: Sprite2D = $Helmet
+
+@onready var health_bar: ProgressBar = $"CanvasLayer/Health Bar"
 
 @export var equiped_helmet : String
 
@@ -40,6 +43,7 @@ var inv = []
 var equiped_item : String
 
 var health = 100
+var max_health = 100
 var SPEEDX = 600.0
 var SPEEDY = 600
 
@@ -64,6 +68,9 @@ var slot_8_item : String
 var slot_9_item : String
 
 func _physics_process(delta: float) -> void:
+	
+	health_bar.max_value = max_health
+	health_bar.value = health
 	
 	if equiped_helmet == "test_helmet":
 		helmet_sprite_node.texture = test_helmet_sprite
@@ -287,3 +294,7 @@ func _on_slot_9_pressed() -> void:
 	else:
 		slot_9_selected.visible = false
 		equiped_item = ""
+
+func take_damage(damage):
+	health -= damage
+	print(health)
