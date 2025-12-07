@@ -2,21 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://corendet3kapt" path="res://scenes/player.tscn" id="1_x7ly8"]
 [ext_resource type="PackedScene" uid="uid://bmmu1d5wsi830" path="res://scenes/test_collectible.tscn" id="2_hd771"]
-[ext_resource type="Texture2D" uid="uid://cs4tmll8l303y" path="res://sprites/OURS.jpeg" id="3_78178"]
+[ext_resource type="Texture2D" uid="uid://cbrph1dql3vqu" path="res://sprites/test_helmet.png" id="3_78178"]
 
 [node name="Testing world" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_x7ly8")]
 unique_name_in_owner = true
+equiped_helmet = ""
 
-[node name="Ours" parent="." instance=ExtResource("2_hd771")]
+[node name="Test Helmet" parent="." instance=ExtResource("2_hd771")]
 position = Vector2(-301, 66)
+item = "Test Helmet"
+item_id = "test_helmet"
 item_sprite = ExtResource("3_78178")
-
-[node name="Ours2" parent="." instance=ExtResource("2_hd771")]
-position = Vector2(-301, 66)
-item_sprite = ExtResource("3_78178")
-
-[node name="Ours3" parent="." instance=ExtResource("2_hd771")]
-position = Vector2(-301, 66)
-item_sprite = ExtResource("3_78178")
+item_type = 2
+armor_type = 1

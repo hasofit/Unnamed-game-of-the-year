@@ -29,12 +29,17 @@ extends CharacterBody2D
 @onready var slot_7_selected: TextureRect = $CanvasLayer/HotBar/Slot7/Slot7Selected
 @onready var slot_8_selected: TextureRect = $CanvasLayer/HotBar/Slot8/Slot8Selected
 @onready var slot_9_selected: TextureRect = $CanvasLayer/HotBar/Slot9/Slot9Selected
+@onready var helmet_sprite_node: Sprite2D = $Helmet
+
+@export var equiped_helmet : String
+
+@export var test_helmet_sprite : Texture
+@export var demon_horns_sprites : Texture
 
 var inv = []
 var equiped_item : String
 
 var health = 100
-var dead = false
 var SPEEDX = 600.0
 var SPEEDY = 600
 
@@ -59,12 +64,10 @@ var slot_8_item : String
 var slot_9_item : String
 
 func _physics_process(delta: float) -> void:
-	if !dead:
-		if not is_on_floor():
-			velocity += get_gravity() * delta
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	
+	if equiped_helmet == "test_helmet":
+		helmet_sprite_node.texture = test_helmet_sprite
+	
 	var directionX := Input.get_axis("move_left", "move_right")
 	var directionY := Input.get_axis("move_up", "move_down")
 	if directionX:
@@ -78,66 +81,69 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func add_item(item_name,item_sprite,item_id):
-	if slot_1_locked == false:
-		slot_1.texture_normal = item_sprite
-		slot_1_label.text = item_name
-		slot_1_locked = true
-		slot_1_item = item_id
-		inv.append(item_id)
-	elif slot_2_locked == false:
-		slot_2.texture_normal = item_sprite
-		slot_2_label.text = item_name
-		slot_2_locked = true
-		slot_2_item = item_id
-		inv.append(item_id)
-	elif slot_3_locked == false:
-		slot_3.texture_normal = item_sprite
-		slot_3_label.text = item_name
-		slot_3_locked = true
-		slot_3_item = item_id
-		inv.append(item_id)
-	elif slot_4_locked == false:
-		slot_4.texture_normal = item_sprite
-		slot_4_label.text = item_name
-		slot_4_locked = true
-		slot_4_item = item_id
-		inv.append(item_id)
-	elif slot_5_locked == false:
-		slot_5.texture_normal = item_sprite
-		slot_5_label.text = item_name
-		slot_5_locked = true
-		slot_5_item = item_id
-		inv.append(item_id)
-	elif slot_6_locked == false:
-		slot_6.texture_normal = item_sprite
-		slot_6_label.text = item_name
-		slot_6_locked = true
-		slot_6_item = item_id
-		inv.append(item_id)
-	elif slot_7_locked == false:
-		slot_7.texture_normal = item_sprite
-		slot_7_label.text = item_name
-		slot_7_locked = true
-		slot_7_item = item_id
-		inv.append(item_id)
-	elif slot_8_locked == false:
-		slot_8.texture_normal = item_sprite
-		slot_8_label.text = item_name
-		slot_8_locked = true
-		slot_8_item = item_id
-		inv.append(item_id)
-	elif slot_9_locked == false:
-		slot_9.texture_normal = item_sprite
-		slot_9_label.text = item_name
-		slot_9_locked = true
-		slot_9_item = item_id
-		inv.append(item_id)
-	else:
-		print(inv)
-		print("No more slots")
-
-
+func add_item(item_name,item_sprite,item_id,item_type,armor_type):
+	if item_type != 2:
+		if slot_1_locked == false:
+			slot_1.texture_normal = item_sprite
+			slot_1_label.text = item_name
+			slot_1_locked = true
+			slot_1_item = item_id
+			inv.append(item_id)
+		elif slot_2_locked == false:
+			slot_2.texture_normal = item_sprite
+			slot_2_label.text = item_name
+			slot_2_locked = true
+			slot_2_item = item_id
+			inv.append(item_id)
+		elif slot_3_locked == false:
+			slot_3.texture_normal = item_sprite
+			slot_3_label.text = item_name
+			slot_3_locked = true
+			slot_3_item = item_id
+			inv.append(item_id)
+		elif slot_4_locked == false:
+			slot_4.texture_normal = item_sprite
+			slot_4_label.text = item_name
+			slot_4_locked = true
+			slot_4_item = item_id
+			inv.append(item_id)
+		elif slot_5_locked == false:
+			slot_5.texture_normal = item_sprite
+			slot_5_label.text = item_name
+			slot_5_locked = true
+			slot_5_item = item_id
+			inv.append(item_id)
+		elif slot_6_locked == false:
+			slot_6.texture_normal = item_sprite
+			slot_6_label.text = item_name
+			slot_6_locked = true
+			slot_6_item = item_id
+			inv.append(item_id)
+		elif slot_7_locked == false:
+			slot_7.texture_normal = item_sprite
+			slot_7_label.text = item_name
+			slot_7_locked = true
+			slot_7_item = item_id
+			inv.append(item_id)
+		elif slot_8_locked == false:
+			slot_8.texture_normal = item_sprite
+			slot_8_label.text = item_name
+			slot_8_locked = true
+			slot_8_item = item_id
+			inv.append(item_id)
+		elif slot_9_locked == false:
+			slot_9.texture_normal = item_sprite
+			slot_9_label.text = item_name
+			slot_9_locked = true
+			slot_9_item = item_id
+			inv.append(item_id)
+		else:
+			print(inv)
+			print("No more slots")
+	elif item_type == 2:
+		if armor_type == 1:
+			equiped_helmet = item_id
+			print(equiped_helmet)
 func _on_slot_1_pressed() -> void:
 	equiped_item = slot_1_item
 	if !slot_1_selected.visible:
@@ -249,7 +255,6 @@ func _on_slot_7_pressed() -> void:
 	else:
 		slot_7_selected.visible = false
 		equiped_item = ""
-
 
 func _on_slot_8_pressed() -> void:
 	equiped_item = slot_8_item

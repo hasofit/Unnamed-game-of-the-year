@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://corendet3kapt"]
+[gd_scene load_steps=7 format=3 uid="uid://corendet3kapt"]
 
 [ext_resource type="Script" uid="uid://ht7wgr73gocf" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cbrph1dql3vqu" path="res://sprites/test_helmet.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://3giatr83dsjw" path="res://sprites/player_down.png" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://c51qv1hr8yis4" path="res://sprites/selected_slot.png" id="3_qhqgy"]
 
@@ -21,6 +22,8 @@ animations = [{
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(10, 10)
 script = ExtResource("1_g2els")
+equiped_helmet = "test_helmet"
+test_helmet_sprite = ExtResource("2_dqkch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_g2els")
@@ -29,6 +32,10 @@ shape = SubResource("CapsuleShape2D_g2els")
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 animation = &"Idle"
 autoplay = "Idle"
+
+[node name="Helmet" type="Sprite2D" parent="."]
+position = Vector2(0, -12.3)
+scale = Vector2(0.575, 0.575)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
