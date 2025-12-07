@@ -13,6 +13,7 @@ equiped_helmet = ""
 
 [node name="Test Helmet" parent="." instance=ExtResource("2_hd771")]
 position = Vector2(-301, 66)
+scale = Vector2(3.795, 3.795)
 item = "Test Helmet"
 item_id = "test_helmet"
 item_sprite = ExtResource("3_78178")
