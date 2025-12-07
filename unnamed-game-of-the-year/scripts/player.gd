@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+var inv = []
+
+var health = 100
 var dead = false
 var SPEEDX = 600.0
 var SPEEDY = 600
