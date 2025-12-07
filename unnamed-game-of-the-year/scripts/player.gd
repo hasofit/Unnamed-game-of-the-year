@@ -73,7 +73,7 @@ var slot_9_item : String
 
 func _physics_process(delta: float) -> void:
 	
-	take_damage(damage)
+	take_damage(damage,delta)
 	
 	health_bar.max_value = max_health
 	health_bar.value = health
@@ -301,8 +301,8 @@ func _on_slot_9_pressed() -> void:
 		slot_9_selected.visible = false
 		equiped_item = ""
 
-func take_damage(damage):
+func take_damage(damage,delta):
 	if equiped_helmet:
 		if equiped_helmet == "test_helmet":
 			shield = 0
-	health -= damage * (shield / 10) * enemy_damaging_count
+	health -= damage * enemy_damaging_count * delta

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://corendet3kapt" path="res://scenes/player.tscn" id="1_x7ly8"]
 [ext_resource type="PackedScene" uid="uid://bmmu1d5wsi830" path="res://scenes/test_collectible.tscn" id="2_hd771"]
 [ext_resource type="Texture2D" uid="uid://cbrph1dql3vqu" path="res://sprites/test_helmet.png" id="3_78178"]
-[ext_resource type="PackedScene" path="res://scenes/slime.tscn" id="4_73ico"]
+[ext_resource type="PackedScene" uid="uid://c4fe5mwt4udl0" path="res://scenes/slime.tscn" id="4_73ico"]
 
 [node name="Testing world" type="Node2D"]
 
@@ -21,3 +21,9 @@ armor_type = 1
 
 [node name="slime" parent="." instance=ExtResource("4_73ico")]
 position = Vector2(254, 27)
+
+[node name="slime2" parent="." instance=ExtResource("4_73ico")]
+position = Vector2(681, 181)
+
+[node name="slime3" parent="." instance=ExtResource("4_73ico")]
+position = Vector2(685, -357)
