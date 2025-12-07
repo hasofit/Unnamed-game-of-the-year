@@ -40,6 +40,8 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func add_item(item_name,item_sprite):
+func add_item(item_name,item_sprite,item_id):
 	slot_1.texture_normal = item_sprite
 	slot_1_label.text = item_name
+	inv.append(item_id)
+	print(item_id)

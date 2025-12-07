@@ -8,6 +8,8 @@ size = Vector2(177, 168)
 
 [node name="Test Collectible" type="Area2D"]
 script = ExtResource("1_1j1pu")
+item = "OURS"
+item_id = "ours"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_1j1pu")
