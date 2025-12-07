@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmmu1d5wsi830"]
+[gd_scene load_steps=4 format=3 uid="uid://bmmu1d5wsi830"]
 
 [ext_resource type="Script" uid="uid://bxeuuhco7mp77" path="res://scripts/test_collectible.gd" id="1_1j1pu"]
 [ext_resource type="Texture2D" uid="uid://cs4tmll8l303y" path="res://sprites/OURS.jpeg" id="2_1j1pu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1j1pu"]
 
 [node name="Test Collectible" type="Area2D"]
 script = ExtResource("1_1j1pu")
@@ -13,5 +15,6 @@ texture = ExtResource("2_1j1pu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -1)
+shape = SubResource("CircleShape2D_1j1pu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
