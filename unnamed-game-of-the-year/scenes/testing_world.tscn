@@ -8,6 +8,14 @@
 
 [node name="Player" parent="." instance=ExtResource("1_x7ly8")]
 
-[node name="Test Collectible" parent="." instance=ExtResource("2_hd771")]
+[node name="Ours" parent="." instance=ExtResource("2_hd771")]
+position = Vector2(-301, 66)
+item_sprite = ExtResource("3_78178")
+
+[node name="Ours2" parent="." instance=ExtResource("2_hd771")]
+position = Vector2(-301, 66)
+item_sprite = ExtResource("3_78178")
+
+[node name="Ours3" parent="." instance=ExtResource("2_hd771")]
 position = Vector2(-301, 66)
 item_sprite = ExtResource("3_78178")
