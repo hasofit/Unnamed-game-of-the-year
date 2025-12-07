@@ -1,25 +1,5 @@
 extends CharacterBody2D
 
-var slot_1_locked = false
-var slot_2_locked = false
-var slot_3_locked = false
-var slot_4_locked = false
-var slot_5_locked = false
-var slot_6_locked = false
-var slot_7_locked = false
-var slot_8_locked = false
-var slot_9_locked = false
-
-var slot_1_item : String
-var slot_2_item : String
-var slot_3_item : String
-var slot_4_item : String
-var slot_5_item : String
-var slot_6_item : String
-var slot_7_item : String
-var slot_8_item : String
-var slot_9_item : String
-
 @onready var slot_1: TextureButton = $CanvasLayer/HotBar/Slot1
 @onready var slot_2: TextureButton = $CanvasLayer/HotBar/Slot2
 @onready var slot_3: TextureButton = $CanvasLayer/HotBar/Slot3
@@ -58,6 +38,25 @@ var dead = false
 var SPEEDX = 600.0
 var SPEEDY = 600
 
+var slot_1_locked = false
+var slot_2_locked = false
+var slot_3_locked = false
+var slot_4_locked = false
+var slot_5_locked = false
+var slot_6_locked = false
+var slot_7_locked = false
+var slot_8_locked = false
+var slot_9_locked = false
+
+var slot_1_item : String
+var slot_2_item : String
+var slot_3_item : String
+var slot_4_item : String
+var slot_5_item : String
+var slot_6_item : String
+var slot_7_item : String
+var slot_8_item : String
+var slot_9_item : String
 
 func _physics_process(delta: float) -> void:
 	if !dead:
