@@ -30,7 +30,6 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.285, 1.285)
 position_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -65,23 +64,125 @@ vertical_alignment = 2
 [node name="Slot2" type="TextureButton" parent="CanvasLayer/HotBar"]
 layout_mode = 2
 
+[node name="Slot2Label" type="Label" parent="CanvasLayer/HotBar/Slot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 2
+
 [node name="Slot3" type="TextureButton" parent="CanvasLayer/HotBar"]
 layout_mode = 2
+
+[node name="Slot3Label" type="Label" parent="CanvasLayer/HotBar/Slot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.5
+offset_right = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Slot4" type="TextureButton" parent="CanvasLayer/HotBar"]
 layout_mode = 2
 
+[node name="Slot4Label" type="Label" parent="CanvasLayer/HotBar/Slot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.5
+offset_right = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 2
+
 [node name="Slot5" type="TextureButton" parent="CanvasLayer/HotBar"]
 layout_mode = 2
+
+[node name="Slot5Label" type="Label" parent="CanvasLayer/HotBar/Slot5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.5
+offset_right = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Slot6" type="TextureButton" parent="CanvasLayer/HotBar"]
 layout_mode = 2
 
+[node name="Slot6Label" type="Label" parent="CanvasLayer/HotBar/Slot6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.5
+offset_right = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 2
+
 [node name="Slot7" type="TextureButton" parent="CanvasLayer/HotBar"]
 layout_mode = 2
+
+[node name="Slot7Label" type="Label" parent="CanvasLayer/HotBar/Slot7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.5
+offset_right = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Slot8" type="TextureButton" parent="CanvasLayer/HotBar"]
 layout_mode = 2
 
+[node name="Slot8Label" type="Label" parent="CanvasLayer/HotBar/Slot8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.5
+offset_right = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 2
+
 [node name="Slot9" type="TextureButton" parent="CanvasLayer/HotBar"]
 layout_mode = 2
+
+[node name="Slot9Label" type="Label" parent="CanvasLayer/HotBar/Slot9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.5
+offset_right = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+vertical_alignment = 2
