@@ -36,7 +36,6 @@ corner_radius_bottom_left = 50
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(10, 10)
 script = ExtResource("1_g2els")
-equiped_helmet = "test_helmet"
 test_helmet_sprite = ExtResource("2_dqkch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -316,6 +315,10 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_qlg0r")
 value = 100.0
 show_percentage = false
 
+[node name="Save Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
 [connection signal="pressed" from="CanvasLayer/HotBar/Slot1" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="CanvasLayer/HotBar/Slot2" to="." method="_on_slot_2_pressed"]
 [connection signal="pressed" from="CanvasLayer/HotBar/Slot3" to="." method="_on_slot_3_pressed"]
@@ -325,3 +328,4 @@ show_percentage = false
 [connection signal="pressed" from="CanvasLayer/HotBar/Slot7" to="." method="_on_slot_7_pressed"]
 [connection signal="pressed" from="CanvasLayer/HotBar/Slot8" to="." method="_on_slot_8_pressed"]
 [connection signal="pressed" from="CanvasLayer/HotBar/Slot9" to="." method="_on_slot_9_pressed"]
+[connection signal="timeout" from="Save Timer" to="." method="_on_save_timer_timeout"]

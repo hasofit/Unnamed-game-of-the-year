@@ -15,7 +15,7 @@ equiped_helmet = ""
 demon_horns_sprites = ExtResource("3_78178")
 
 [node name="Test Helmet" parent="." instance=ExtResource("2_hd771")]
-position = Vector2(-301, 66)
+position = Vector2(-727.00006, -4.0000076)
 scale = Vector2(3.795, 3.795)
 item = "Test Helmet"
 item_id = "test_helmet"
